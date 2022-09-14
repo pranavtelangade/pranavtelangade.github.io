@@ -241,6 +241,13 @@ a:hover {
   margin-bottom: 0;
 }
 
+.list-ach{
+  padding-left: 10;
+  margin-bottom: 0;
+  line-height: 2;
+  font-size: 1.3rem;
+
+}
 .list-ico {
   line-height: 2;
 }
