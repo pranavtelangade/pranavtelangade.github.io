@@ -12,7 +12,7 @@
   // Preloader
   $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
+      $('#preloader').delay(50).fadeOut(500, function () {
         $(this).remove();
       });
     }
@@ -20,14 +20,14 @@
 
   // Back to top button
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 1000) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
   $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+    $('html, body').animate({scrollTop : 0},1000, 'easeInOutExpo');
     return false;
   });
 
