@@ -366,11 +366,7 @@ a:hover {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
 }
-*, *:after, *:before {
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
+
 .card {
   background: #000;
   border-radius: 0.15em;
@@ -389,8 +385,8 @@ a:hover {
   max-width: 320px;
 }
 .card:hover {
-  background: #1B1B1B;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  background: #090909;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 .card h1 {
   color: #fff;
