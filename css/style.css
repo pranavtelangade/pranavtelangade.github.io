@@ -1459,7 +1459,7 @@ footer .credits a {
 }
 
 .mask .quote{
-  font-size: 10px;
+  font-size: 12px;
   color:#cccccc;
 }
 
@@ -1475,27 +1475,27 @@ footer .credits a {
 }
 
 .mask li.anim1 {
-  animation: cycle 15s linear infinite;
+  animation: cycle 20s linear infinite;
 }
 
 .mask li.anim2 {
-  animation: cycle2 15s linear infinite;
+  animation: cycle2 20s linear infinite;
 }
 
 .mask li.anim2 {
-  animation: cycle2 15s linear infinite;
+  animation: cycle2 20s linear infinite;
 }
 
 .mask li.anim3 {
-  animation: cycle3 15s linear infinite;
+  animation: cycle3 20s linear infinite;
 }
 
 .mask li.anim4 {
-  animation: cycle4 15s linear infinite;
+  animation: cycle4 20s linear infinite;
 }
 
 .mask li.anim5 {
-  animation: cycle5 15s linear infinite;
+  animation: cycle5 20s linear infinite;
 }
 
 .mask:hover li {
