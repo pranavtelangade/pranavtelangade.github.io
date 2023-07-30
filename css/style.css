@@ -116,6 +116,7 @@ a:hover {
 .table-cell {
   display: table-cell;
   vertical-align: middle;
+  cursor: none;
 }
 
 /*--/ Sections /--*/
@@ -1688,4 +1689,34 @@ footer .credits a {
     opacity: 0;
     z-index: 0;
   }
+}
+
+.mousepointer {
+  align-items: center;
+  overflow: hidden;
+  }
+
+.mouse-circle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #0d9963;
+  border-radius: 50%;
+  background: none;
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.1s ease;
+  cursor: none;
+}
+
+.mouse-point {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0d9963;
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.001s ease;
+  cursor: none;
 }
