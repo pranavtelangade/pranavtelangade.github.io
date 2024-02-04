@@ -116,19 +116,19 @@
 
 })(jQuery);
 
-const body = document.querySelector('body');
+
 const circle = document.querySelector('.mouse-circle');
 const point = document.querySelector('.mouse-point');
 
-body.addEventListener("mousemove", (e) => {
+document.addEventListener("mousemove", (e) => {
 	circle.style.display = point.style.display = `block`;
-	
-	circle.style.top = `${e.clientY - 25}px`;
-	circle.style.left = `${e.clientX - 25}px`;
-	point.style.top = `${e.clientY - 4}px`;
-	point.style.left = `${e.clientX - 4}px`;
+	document.body.style.cursor = `none`;
+	circle.style.top = `${e.pageY - 25}px`;
+	circle.style.left = `${e.pageX - 25}px`;
+	point.style.top = `${e.pageY - 4}px`;
+	point.style.left = `${e.pageX - 4}px`;
 });
 
-body.addEventListener("mouseleave", () => {
+document.addEventListener("mouseleave", () => {
 	circle.style.display = point.style.display = `none`;
 });
