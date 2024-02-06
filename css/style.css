@@ -5,6 +5,16 @@ body {
   overflow-x: hidden;
 }
 
+.light{
+  background-color: white !important;
+  color: #000 !important;
+}
+
+.dark{
+  background-color: #000000 !important;
+  color: #f2f2f2 !important;
+}
+
 h1{
   color: #f2f2f2;
 }
@@ -21,6 +31,14 @@ h5{
   color: #f2f2f2;
 }
 h6 {
+  color: #f2f2f2;
+}
+
+p{
+  color: #f2f2f2;
+}
+
+li{
   color: #f2f2f2;
 }
 
@@ -1736,8 +1754,7 @@ footer .credits a {
   pointer-events: none;
   transition: all 0.1s ease;
   cursor: none;
-  z-index: 100;
-
+  z-index: 1000000;
 }
 
 .mouse-point {
@@ -1750,7 +1767,7 @@ footer .credits a {
   pointer-events: none;
   transition: all 0.001s ease;
   cursor: none;
-  z-index: 100;
+  z-index: 1000000;
 }
 
 /*======================================
@@ -1776,4 +1793,15 @@ footer .credits a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0d9963; 
+}
+
+.font-green {
+  color: #004d1a;
+}
+
+.mode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
 }
