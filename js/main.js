@@ -130,6 +130,8 @@
   });
 })(jQuery);
 
+/*--/ Mouse Pointer /--*/
+
 const circle = document.querySelector(".mouse-circle");
 const point = document.querySelector(".mouse-point");
 
@@ -146,9 +148,11 @@ document.addEventListener("mouseleave", () => {
   circle.style.display = point.style.display = `none`;
 });
 
+/*--/ Darkmode /--*/
+
 darkmode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-if (!darkmode) {
+function darkmodetoggle() {
   document.body.classList.toggle("light");
   document.body.querySelectorAll(".subtitle-a").forEach(function (e) {
     e.classList.toggle("light");
@@ -174,7 +178,7 @@ if (!darkmode) {
   document.getElementById("mode").innerHTML = `dark_mode`;
 }
 
-document.getElementById("mode").addEventListener("click", function () {
+function lightmodetoggle() {
   document.body.classList.toggle("light");
   document.body.querySelectorAll(".subtitle-a").forEach(function (e) {
     e.classList.toggle("light");
@@ -197,9 +201,28 @@ document.getElementById("mode").addEventListener("click", function () {
   document.body.querySelectorAll(".service-ico").forEach(function (e) {
     e.classList.toggle("dark");
   });
+}
+
+if (!darkmode) {
+  darkmodetoggle();
+}
+
+document.getElementById("mode").addEventListener("click", function () {
+  lightmodetoggle();
   if (document.getElementById("mode").innerHTML == `dark_mode`) {
     document.getElementById("mode").innerHTML = `light_mode`;
   } else {
     document.getElementById("mode").innerHTML = `dark_mode`;
+  }
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key == "d" || e.key == "D") {
+    lightmodetoggle();
+    if (document.getElementById("mode").innerHTML == `dark_mode`) {
+      document.getElementById("mode").innerHTML = `light_mode`;
+    } else {
+      document.getElementById("mode").innerHTML = `dark_mode`;
+    }
   }
 });
