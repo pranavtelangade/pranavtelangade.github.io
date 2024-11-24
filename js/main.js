@@ -135,18 +135,20 @@
 const circle = document.querySelector(".mouse-circle");
 const point = document.querySelector(".mouse-point");
 
-document.addEventListener("mousemove", (e) => {
-  circle.style.display = point.style.display = `block`;
-  document.body.style.cursor = `none`;
-  circle.style.top = `${e.pageY - 25}px`;
-  circle.style.left = `${e.pageX - 25}px`;
-  point.style.top = `${e.pageY - 4}px`;
-  point.style.left = `${e.pageX - 4}px`;
-});
+if (window.innerWidth > 767) {
+  document.addEventListener("mousemove", (e) => {
+    circle.style.display = point.style.display = `block`;
+    document.body.style.cursor = `none`;
+    circle.style.top = `${e.pageY - 25}px`;
+    circle.style.left = `${e.pageX - 25}px`;
+    point.style.top = `${e.pageY - 4}px`;
+    point.style.left = `${e.pageX - 4}px`;
+  });
 
-document.addEventListener("mouseleave", () => {
-  circle.style.display = point.style.display = `none`;
-});
+  document.addEventListener("mouseleave", () => {
+    circle.style.display = point.style.display = `none`;
+  });
+}
 
 /*--/ Darkmode /--*/
 
